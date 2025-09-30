@@ -7,4 +7,10 @@ just dumping my small projects here until i get used to this programming languag
 📌 Integrated multiple data types    
 📌 Formatted output/Passing arguments  
 📌 Conditional statements w/ logical operator  
-📌 Syntaxes from a built in library in C
+📌 Syntaxes from a built in library in C  
+
+### 🌟 Mini-project 2 ###  
+
+### Beginner's program in C language   
+📌 Applied new mathematical operator 
+📌 Used a new built in C library
