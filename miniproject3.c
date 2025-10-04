@@ -119,8 +119,6 @@ else{
     printf("Invalid user input please choose between yes or no options in small caps");
 }
 
-
-
-
 return 0;
+
 }
