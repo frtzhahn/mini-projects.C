@@ -12,7 +12,8 @@ void Notes();
 void Notes1();
 void pomodoro();
 void pomodoro1();
-void methods();
+void menu();
+void menu1();
 void help();
 void help1();
 
@@ -24,7 +25,7 @@ int main()
     char options[20];
 
     // function calling for ascii art
-    methods();
+    menu();
 
     // program prompt and user input
     printf("Type \033[1;34m'pomodoro'\033[0m to continue | Type \033[1;34m'notes'\033[0m to list your notes |Type \033[1;34m'help'\033[0m for further instructions| Type \033[1;34m'main'\033[0m to redirect on the main page: \033[0m: ");
@@ -44,7 +45,51 @@ int main()
     {
         help1(); // if the condition is true pomodoro page user will be directed to this page (prototype)
     }
+    else if (strcmp(options, "main") == 0)
+    {
+        menu1();
+    }
+    else
+    {
+        clear();
+        printf("\n\n\033[1;31mInvalid choice, run the program again\n\n");
+    }
+
     return 0;
+}
+
+void menu1()
+{
+
+    clear();
+    menu();
+    char options[20];
+
+    printf("Type \033[1;34m'pomodoro'\033[0m to continue | Type \033[1;34m'notes'\033[0m to list your notes |Type \033[1;34m'help'\033[0m for further instructions| Type \033[1;34m'main'\033[0m to redirect on the main page: \033[0m: ");
+    fgets(options, (sizeof options), stdin);
+    options[strcspn(options, "\n")] = '\0';
+
+    if (strcmp(options, "pomodoro") == 0) // this will redirect to the pomodoro page
+    {
+        pomodoro1();
+    }
+    else if (strcmp(options, "notes") == 0)
+    {
+        Notes1();
+    }
+    else if (strcmp(options, "help") == 0)
+    {
+        help1();
+    }
+    else if (strcmp(options, "main") == 0)
+    {
+        menu1();
+    }
+    else
+    {
+        clear();
+        printf("\n\n\033[1;31mInvalid choice, run the program again\n\n");
+    }
 }
 
 void pomodoro1()
@@ -138,6 +183,15 @@ void pomodoro1()
     {
         help1();
     }
+    else if (strcmp(options, "main") == 0)
+    {
+        menu1();
+    }
+    else
+    {
+        clear();
+        printf("\n\n\033[1;31mInvalid choice, run the program again\n\n");
+    }
 
     // after ending the previous conditional statement this will appear to let the user move around in the study page
     printf("Type \033[1;34m'pomodoro'\033[0m to continue | Type \033[1;34m'notes'\033[0m to list your notes |Type \033[1;34m'help'\033[0m for further instructions| Type \033[1;34m'main'\033[0m to redirect on the main page: \033[0m: ");
@@ -155,6 +209,15 @@ void pomodoro1()
     else if (strcmp(options, "help") == 0)
     {
         help1();
+    }
+    else if (strcmp(options, "main") == 0)
+    {
+        menu1();
+    }
+    else
+    {
+        clear();
+        printf("\n\n\033[1;31mInvalid choice, run the program again\n\n");
     }
 }
 
@@ -217,6 +280,15 @@ void Notes1() // the user will be redirected to this page if it is selected
     {
         help1();
     }
+    else if (strcmp(options, "main") == 0)
+    {
+        menu1();
+    }
+    else
+    {
+        clear();
+        printf("\n\n\033[1;31mInvalid choice, run the program again\n\n");
+    }
 
     // program prompt and user input
     printf("Type \033[1;34m'pomodoro'\033[0m to continue | Type \033[1;34m'notes'\033[0m to list your notes |Type \033[1;34m'help'\033[0m for further instructions| Type \033[1;34m'main'\033[0m to redirect on the main page: \033[0m: ");
@@ -234,6 +306,15 @@ void Notes1() // the user will be redirected to this page if it is selected
     else if (strcmp(options, "help") == 0)
     {
         help1();
+    }
+    else if (strcmp(options, "main") == 0)
+    {
+        menu1();
+    }
+    else
+    {
+        clear();
+        printf("\n\n\033[1;31mInvalid choice, run the program again\n\n");
     }
 }
 
@@ -269,6 +350,15 @@ void help1()
     {
         pomodoro1();
     }
+    else if (strcmp(options, "main") == 0)
+    {
+        menu1();
+    }
+    else
+    {
+        clear();
+        printf("\n\n\033[1;31mInvalid choice, run the program again\n\n");
+    }
 
     // program prompt and user input
     printf("Type \033[1;34m'pomodoro'\033[0m to continue | Type \033[1;34m'notes'\033[0m to list your notes |Type \033[1;34m'help'\033[0m for further instructions| Type \033[1;34m'main'\033[0m to redirect on the main page: \033[0m: ");
@@ -286,6 +376,15 @@ void help1()
     else if (strcmp(options, "help") == 0)
     {
         help1();
+    }
+    else if (strcmp(options, "main") == 0)
+    {
+        menu1();
+    }
+    else
+    {
+        clear();
+        printf("\n\n\033[1;31mInvalid choice, run the program \n\n");
     }
 }
 
@@ -347,7 +446,7 @@ void pomodoro()
     printf("░██           ░██████   ░██       ░██   ░██████   ░███████     ░██████   ░██     ░██   ░██████\n\n");
 }
 
-void methods()
+void menu()
 {
 
     printf("  ░██████   ░██████████░██     ░██ ░███████   ░██     ░██    ░███     ░███ ░██████████ ░██████████░██     ░██   ░██████   ░███████     ░██████\n");
