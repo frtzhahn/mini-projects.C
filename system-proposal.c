@@ -1,9 +1,9 @@
-// libraries used
+//libraries used
 #include <stdio.h>
-#include <unistd.h>
-#include <string.h>
+#include<unistd.h>
+#include<string.h>
 
-// function prototypes for clear, ascii arts, countdown, and functions
+//function prototypes for clear, ascii arts, countdown, and functions
 void countdown(int seconds);
 void study();
 void Break();
